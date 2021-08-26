@@ -319,14 +319,17 @@ with open('data.txt', 'a') as f:
 def trigger_logging(i2c_buses = [i2c,soft_i2c,soft_i2c_2], start=start):
   for count, i in enumerate(i2c_buses):
     delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
-    data = log(i, count, delta)
-    print(data)
+    try:
+      data = log(i, count, delta)
+      print(data)
+    except:
+      print("Sensor malfunction")
 
 ## Using timer
 ## Advantage of periodic timer: prevents device from crashing.
 ## Log data using a timer
 timer = Timer(0)
-timer.init(period=10000, mode=Timer.PERIODIC, callback=lambda t:trigger_logging())
+timer.init(period=60000, mode=Timer.PERIODIC, callback=lambda t:trigger_logging())
 
 # while True:
 #   time.sleep(10)           # sleep for 10 second
