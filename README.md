@@ -2,23 +2,23 @@
 > Simple device to log environmental conditions. It uses limited amount of persistent flash memory ~0.5 Mb to store temperature, pressure and relative humidity and gas conductivity as measured by a BME680 (A digital sensor manufactured by BOSCH sensortech).
 
 ## Example
-                                    ┌────────────────┐    ┌────────────────┐
-                                    │BME680          │    │BME680          │
-                                    │                │    │                │
-                                    │Vin+┼Gnd┼SCL┼SDA│    │Vin+┼Gnd┼SCL┼SDA│
-                                       │   │   │   │         │  │    │   │
-                                       ├──.│. .│. .│.────────┘  │    │   │
-                                       │   │   │   │            │    │   │   ...
-                                       │   ├──.│. .│. ──────────┘    │   │
-               ┌────────┐              │   │   │   │                 │   │
-               │~9-24V  │  5v+      ┌──▼───▼───▼───▼───────┐         ▼   ▼
-   Vin+ ──────►│ Step   ├──────────►│ESP32     I2C Bus 1   │       I2C Bus 2
-               │  down  │   v-      │                      │
-   Vin-───────►│ Conv.  ├──────────►│                      │
-               │        │           │                      │
-               │        │           │ Wifi: MyESP32        │
-               │        │           │ Pass: elderberry     │
-               └────────┘           └──────────────────────┘
+                                        ┌────────────────┐    ┌────────────────┐
+                                        │BME680          │    │BME680          │
+                                        │                │    │                │
+                                        │Vin+┼Gnd┼SCL┼SDA│    │Vin+┼Gnd┼SCL┼SDA│
+                                        │   │   │   │         │  │    │   │
+                                        ├──.│. .│. .│.────────┘  │    │   │
+                                        │   │   │   │            │    │   │   ...
+                                        │   ├──.│. .│. ──────────┘    │   │
+                ┌────────┐              │   │   │   │                 │   │
+                │~9-24V  │  5v+      ┌──▼───▼───▼───▼───────┐         ▼   ▼
+    Vin+ ──────►│ Step   ├──────────►│ESP32     I2C Bus 1   │       I2C Bus 2
+                │  down  │   v-      │                      │
+    Vin-───────►│ Conv.  ├──────────►│                      │
+                │        │           │                      │
+                │        │           │ Wifi: MyESP32        │
+                │        │           │ Pass: elderberry     │
+                └────────┘           └──────────────────────┘
 
 ### Workflow
 1. Connect to ESP32's wifi network
