@@ -21,15 +21,19 @@
                 └────────┘           └──────────────────────┘
 
 ### Workflow
-1. Connect to ESP32's wifi network
-2. Webrepl micropython
-3. send empty data.txt 
-4. reset (power cycle or reset button)
-5. let log for a given period
-6. get data.txt
-7. enjoy data
-8. recharge battery and repeat.
+1. Connect to ESP32's wifi network then microcontroller using webrepl
+2. ... or connect direct via serial port (ex. using PuTTy)
+3. Send empty data.txt using webrepl or ampy. 
+4. Reset (power cycle or reset button).
+5. Let log for a given period...
+6. Get data.txt suing weprepl or ampy.
+7. Enjoy data!
+8. Recharge battery and repeat.
 
 ### Notes
-https://github.com/micropython/webrepl
-https://docs.micropython.org/en/latest/esp32/quickref.html
+1. https://github.com/micropython/webrepl
+1. https://docs.micropython.org/en/latest/esp32/quickref.html
+1. https://github.com/pimoroni/bme680-python
+1. https://github.com/scientifichackers/ampy 
+1. https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/
+1. https://www.espressif.com/en/products/socs/esp32
