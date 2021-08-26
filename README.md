@@ -1,5 +1,5 @@
 # micropython ESP32 environmental data logger
-> Simple device to log environmental conditions. It uses limited amount of persistent flash memory ~0.5 Mb to store temperature, pressure and relative humidity and gas conductivity as measured by a BME680 (A digital sensor manufactured by BOSCH sensortech).
+> Simple device to log environmental conditions. It uses limited amount of persistent flash memory ~0.5 Mb to store temperature, pressure and relative humidity and gas conductivity as measured by multiple BME680 (A digital sensor manufactured by BOSCH sensortech).
 
 ## Example
                                         ┌────────────────┐    ┌────────────────┐
